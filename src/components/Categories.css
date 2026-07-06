@@ -1,0 +1,54 @@
+/* ── Categories Section ── */
+.categories-section {
+  background: var(--cream-dark);
+  padding: 56px 0 48px;
+}
+
+.categories-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* ── Each category quick-nav button ── */
+.cat-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 2px solid var(--cream-dark);
+  border-radius: var(--radius-md);
+  padding: 22px 34px;
+  min-width: 150px;
+  transition: all var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.cat-btn:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-md);
+}
+
+.cat-btn__icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.cat-btn__label {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .cat-btn {
+    min-width: 105px;
+    padding: 16px 18px;
+  }
+  .cat-btn__icon { font-size: 1.8rem; }
+}

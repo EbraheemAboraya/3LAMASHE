@@ -1,0 +1,43 @@
+/* ── قسم الأكثر طلباً ── */
+.promos-section {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+  padding: 60px 0 80px;
+}
+
+.promos-grid {
+  margin-bottom: 48px;
+}
+
+/* ── CTA row ── */
+.promos-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.promos-cta p {
+  color: var(--text-medium);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.promos-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-green);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 34px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.32);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.promos-wa-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.42);
+}
