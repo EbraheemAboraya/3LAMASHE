@@ -18,6 +18,11 @@
 //
 //  ملاحظة عن "featured": المنتجات التي featured: true تظهر تلقائياً
 //  في قسم "الأكثر طلباً" في أسفل الصفحة.
+//
+//  ملاحظة عن الصور: معظم صور الميلك شيك ونكهات مميزة هي صور حقيقية
+//  مجانية من Pexels (لا تتطلب نسب/attribution). العناصر التي لم يتوفر
+//  لها صورة حقيقية مطابقة تماماً للنكهة (فانيلا، فستق حلبي، جوز الهند
+//  رافايلو) تحمل تعليق TODO فوقها — استبدلها بصورة حقيقية عندما تتوفر.
 // ================================================================
 
 // ── معلومات المتجر (تظهر في الهيدر والفوتر) ─────────────────────
@@ -47,7 +52,7 @@ export const categories = [
         description: "ميلك شيك غني بطعم الأوريو الكلاسيكي مع قطع بسكويت مطحونة وكريمة فوق سائلة.",
         price:       "25 ₪",
         featured:    true,
-        image: "https://placehold.co/500x500/2B211A/D4AF37?text=Oreo+Milkshake",
+        image: "https://images.pexels.com/photos/25913231/pexels-photo-25913231.jpeg?auto=compress&cs=tinysrgb&w=800",
         alt:   "ميلك شيك أوريو",
       },
       {
@@ -55,7 +60,7 @@ export const categories = [
         name:        "لوتس",
         description: "ميلك شيك بطعم بسكويت لوتس الكراميلي، مع صوص لوتس وقطع بسكويت مقرمشة.",
         price:       "25 ₪",
-        image: "https://placehold.co/500x500/8B5E34/FBF3E1?text=Lotus+Milkshake",
+        image: "https://images.pexels.com/photos/28841107/pexels-photo-28841107.jpeg?auto=compress&cs=tinysrgb&w=800",
         alt:   "ميلك شيك لوتس",
       },
       {
@@ -63,6 +68,7 @@ export const categories = [
         name:        "فانيلا",
         description: "ميلك شيك كلاسيكي بنكهة الفانيلا الطبيعية الناعمة، بسيط وأصيل.",
         price:       "25 ₪",
+        // TODO: صورة مؤقتة (placeholder) — لم يتوفر لها بديل حقيقي مناسب، استبدلها بصورة حقيقية لاحقاً
         image: "https://placehold.co/500x500/EFE1C6/2B211A?text=Vanilla+Milkshake",
         alt:   "ميلك شيك فانيلا",
       },
@@ -71,7 +77,7 @@ export const categories = [
         name:        "نوتيلا",
         description: "ميلك شيك بطعم نوتيلا الشوكولاتة والبندق الغني، مع صوص نوتيلا فوقه.",
         price:       "25 ₪",
-        image: "https://placehold.co/500x500/3B241A/D4AF37?text=Nutella+Milkshake",
+        image: "https://images.pexels.com/photos/18133821/pexels-photo-18133821.jpeg?auto=compress&cs=tinysrgb&w=800",
         alt:   "ميلك شيك نوتيلا",
       },
       {
@@ -79,7 +85,7 @@ export const categories = [
         name:        "كندر",
         description: "ميلك شيك بطعم شوكولاتة كندر الكريمية مع قطع شوكولاتة كندر الحقيقية.",
         price:       "25 ₪",
-        image: "https://placehold.co/500x500/C9A227/2B211A?text=Kinder+Milkshake",
+        image: "https://images.pexels.com/photos/11381485/pexels-photo-11381485.jpeg?auto=compress&cs=tinysrgb&w=800",
         alt:   "ميلك شيك كندر",
       },
       {
@@ -87,6 +93,7 @@ export const categories = [
         name:        "فستق حلبي",
         description: "ميلك شيك بطعم الفستق الحلبي الأصيل، مع رشة فستق مجروش على الوجه.",
         price:       "25 ₪",
+        // TODO: صورة مؤقتة (placeholder) — لم يتوفر لها بديل حقيقي مناسب، استبدلها بصورة حقيقية لاحقاً
         image: "https://placehold.co/500x500/7A8B5C/FBF3E1?text=Pistachio+Milkshake",
         alt:   "ميلك شيك فستق حلبي",
       },
@@ -95,7 +102,7 @@ export const categories = [
         name:        "توت",
         description: "ميلك شيك منعش بطعم التوت الطازج، مع لمسة حلاوة طبيعية مميزة.",
         price:       "25 ₪",
-        image: "https://placehold.co/500x500/6B2C42/FBF3E1?text=Berry+Milkshake",
+        image: "https://images.pexels.com/photos/3625372/pexels-photo-3625372.jpeg?auto=compress&cs=tinysrgb&w=800",
         alt:   "ميلك شيك توت",
       },
       {
@@ -103,7 +110,7 @@ export const categories = [
         name:        "توت موز",
         description: "مزيج منعش من التوت والموز الطازج في كوب ميلك شيك كريمي القوام.",
         price:       "25 ₪",
-        image: "https://placehold.co/500x500/D98A3D/2B211A?text=Strawberry+Banana",
+        image: "https://images.pexels.com/photos/10066814/pexels-photo-10066814.jpeg?auto=compress&cs=tinysrgb&w=800",
         alt:   "ميلك شيك توت موز",
       },
       {
@@ -111,7 +118,7 @@ export const categories = [
         name:        "كراميل",
         description: "ميلك شيك غني بصوص الكراميل الذهبي الكريمي، حلاوة متوازنة في كل رشفة.",
         price:       "25 ₪",
-        image: "https://placehold.co/500x500/A9702B/FBF3E1?text=Caramel+Milkshake",
+        image: "https://images.pexels.com/photos/214333/pexels-photo-214333.jpeg?auto=compress&cs=tinysrgb&w=800",
         alt:   "ميلك شيك كراميل",
       },
     ],
@@ -131,7 +138,7 @@ export const categories = [
         name:        "بلو بيري",
         description: "ميلك شيك مميز بطعم التوت الأزرق المنعش، مع لمسة كريمية فاخرة.",
         price:       "25 ₪",
-        image: "https://placehold.co/500x500/2E3A59/D4AF37?text=Blueberry",
+        image: "https://images.pexels.com/photos/11135665/pexels-photo-11135665.jpeg?auto=compress&cs=tinysrgb&w=800",
         alt:   "ميلك شيك بلو بيري",
       },
       {
@@ -139,6 +146,7 @@ export const categories = [
         name:        "جوز الهند رافايلو",
         description: "نكهة فاخرة تجمع جوز الهند الناعم مع لمسة اللوز على طريقة رافايلو.",
         price:       "25 ₪",
+        // TODO: صورة مؤقتة (placeholder) — لم يتوفر لها بديل حقيقي مناسب، استبدلها بصورة حقيقية لاحقاً
         image: "https://placehold.co/500x500/EFE1C6/8B5E34?text=Coconut+Raffaello",
         alt:   "ميلك شيك جوز الهند رافايلو",
       },
@@ -147,7 +155,7 @@ export const categories = [
         name:        "مارشميلو كاندي",
         description: "ميلك شيك حلو ومرح بطعم المارشميلو الطري، مع قطع كاندي ملونة فوقه.",
         price:       "25 ₪",
-        image: "https://placehold.co/500x500/D9536A/FBF3E1?text=Marshmallow+Candy",
+        image: "https://images.pexels.com/photos/1028735/pexels-photo-1028735.jpeg?auto=compress&cs=tinysrgb&w=800",
         alt:   "ميلك شيك مارشميلو كاندي",
       },
       {
@@ -155,7 +163,7 @@ export const categories = [
         name:        "كورن فلكس",
         description: "نكهة مبتكرة بطعم رقائق الذرة المقرمشة، مع لمسة كراميل خفيفة.",
         price:       "25 ₪",
-        image: "https://placehold.co/500x500/C9A227/2B211A?text=Corn+Flakes",
+        image: "https://images.pexels.com/photos/20460/pexels-photo.png?auto=compress&cs=tinysrgb&w=800",
         alt:   "ميلك شيك كورن فلكس",
       },
       {
@@ -163,7 +171,7 @@ export const categories = [
         name:        "بريتزل مالح",
         description: "مزيج فريد بين الحلو والمالح، مع قطع البريتزل المقرمشة الحقيقية.",
         price:       "25 ₪",
-        image: "https://placehold.co/500x500/8B5E34/FBF3E1?text=Salted+Pretzel",
+        image: "https://images.pexels.com/photos/6025810/pexels-photo-6025810.jpeg?auto=compress&cs=tinysrgb&w=800",
         alt:   "ميلك شيك بريتزل مالح",
       },
       {
@@ -172,7 +180,7 @@ export const categories = [
         description: "توازن مثالي بين حلاوة الكراميل ولمسة الملح المميزة في كل رشفة.",
         price:       "25 ₪",
         featured:    true,
-        image: "https://placehold.co/500x500/A9702B/2B211A?text=Salted+Caramel",
+        image: "https://images.pexels.com/photos/128399/pexels-photo-128399.jpeg?auto=compress&cs=tinysrgb&w=800",
         alt:   "ميلك شيك كراميل مالح",
       },
     ],

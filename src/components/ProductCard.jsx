@@ -1,5 +1,11 @@
 import './ProductCard.css'
 
+// عند فشل تحميل صورة المنتج، تُستبدل تلقائياً بصورة بديلة تحمل اسم المنتج
+function handleImageError(event, product) {
+  event.currentTarget.onerror = null
+  event.currentTarget.src = `https://placehold.co/500x500/2B211A/D4AF37?text=${encodeURIComponent(product.name)}`
+}
+
 // بطاقة منتج واحدة — صورة، اسم، وصف، سعر
 function ProductCard({ product }) {
   return (
@@ -13,6 +19,7 @@ function ProductCard({ product }) {
           alt={product.alt || product.name}
           className="card-img"
           loading="lazy"
+          onError={(event) => handleImageError(event, product)}
         />
       </div>
 
