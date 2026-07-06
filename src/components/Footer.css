@@ -5,10 +5,10 @@
   padding: 64px 0 0;
 }
 
-/* 4-column layout on desktop */
+/* 3-column layout on desktop */
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1.6fr 1fr 1.6fr;
+  grid-template-columns: 2fr 1.6fr 1.4fr;
   gap: 40px;
   padding-bottom: 52px;
 }
@@ -71,33 +71,6 @@
 .footer-links a:hover,
 .footer-list a:hover {
   color: var(--gold-light);
-}
-
-/* ── WhatsApp column ── */
-.footer-wa-text {
-  font-size: 0.86rem;
-  color: rgba(251, 246, 236, 0.55);
-  line-height: 1.7;
-  margin-bottom: 18px;
-}
-
-.footer-wa-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--accent-green);
-  color: white;
-  font-weight: 700;
-  font-size: 0.9rem;
-  padding: 11px 22px;
-  border-radius: var(--radius-full);
-  transition: background var(--transition), transform var(--transition);
-  box-shadow: 0 3px 12px rgba(37, 211, 102, 0.3);
-}
-
-.footer-wa-btn:hover {
-  background: #1DA851;
-  transform: translateY(-2px);
 }
 
 /* ── Bottom bar ── */

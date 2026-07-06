@@ -1,5 +1,5 @@
 import './Header.css'
-import { WHATSAPP_NUMBER, STORE_INFO } from '../data/products'
+import { STORE_INFO } from '../data/products'
 
 function Header() {
   return (
@@ -19,17 +19,6 @@ function Header() {
           <a href="#bakery"     className="nav-link">المخبوزات</a>
           <a href="#footer"     className="nav-link">تواصل معنا</a>
         </nav>
-
-        {/* ── زر واتساب السريع ── */}
-        <a
-          href={`https://wa.me/${WHATSAPP_NUMBER}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="header-whatsapp"
-          aria-label="تواصل معنا على واتساب"
-        >
-          💬 واتساب
-        </a>
 
       </div>
     </header>

@@ -1,9 +1,7 @@
 import './Hero.css'
-import { WHATSAPP_NUMBER, STORE_INFO } from '../data/products'
+import { STORE_INFO } from '../data/products'
 
 function Hero() {
-  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("مرحباً! أودّ الاستفسار عن المنيو.")}`
-
   return (
     <section className="hero" id="top" aria-label="البانر الرئيسي">
 
@@ -20,18 +18,10 @@ function Hero() {
         {/* الشعار التعريفي */}
         <p className="hero-subtitle">{STORE_INFO.tagline}</p>
 
-        {/* أزرار الإجراء */}
+        {/* زر الإجراء */}
         <div className="hero-buttons">
           <a href="#milkshakes" className="hero-btn hero-btn--primary">
             تصفح المنيو
-          </a>
-          <a
-            href={waLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hero-btn hero-btn--whatsapp"
-          >
-            💬 اطلب الآن
           </a>
         </div>
 

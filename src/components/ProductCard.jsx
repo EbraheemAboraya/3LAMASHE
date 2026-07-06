@@ -1,13 +1,6 @@
 import './ProductCard.css'
-import { WHATSAPP_NUMBER } from '../data/products'
 
-// يبني رابط واتساب مع رسالة طلب جاهزة باللغة العربية
-function buildWhatsAppLink(productName) {
-  const message = `مرحباً، أريد طلب: ${productName}`
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
-}
-
-// بطاقة منتج واحدة — صورة، اسم، وصف، سعر، زر طلب عبر واتساب
+// بطاقة منتج واحدة — صورة، اسم، وصف، سعر
 function ProductCard({ product }) {
   return (
     <article className="product-card">
@@ -28,18 +21,9 @@ function ProductCard({ product }) {
         <h3 className="card-name">{product.name}</h3>
         <p className="card-desc">{product.description}</p>
 
-        {/* ── السعر + زر واتساب ── */}
+        {/* ── السعر ── */}
         <div className="card-footer">
           <span className="card-price">{product.price}</span>
-          <a
-            href={buildWhatsAppLink(product.name)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="card-wa-btn"
-            aria-label={`اطلب ${product.name} عبر واتساب`}
-          >
-            💬 اطلب عبر واتساب
-          </a>
         </div>
       </div>
     </article>

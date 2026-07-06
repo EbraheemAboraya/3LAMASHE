@@ -1,5 +1,5 @@
 import './Footer.css'
-import { STORE_INFO, WHATSAPP_NUMBER } from '../data/products'
+import { STORE_INFO } from '../data/products'
 
 function Footer() {
   const year = new Date().getFullYear()
@@ -47,22 +47,6 @@ function Footer() {
               <li><a href="#bakery">المخبوزات</a></li>
               <li><a href="#promotions">الأكثر طلباً</a></li>
             </ul>
-          </div>
-
-          {/* ── العمود الرابع: واتساب ── */}
-          <div className="footer-col">
-            <h4 className="footer-heading">اطلب عبر واتساب</h4>
-            <p className="footer-wa-text">
-              تفضّل التواصل المباشر؟ راسلنا على واتساب وسنجهّز طلبك بأسرع وقت!
-            </p>
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-wa-btn"
-            >
-              💬 تحدّث معنا على واتساب
-            </a>
           </div>
 
         </div>
