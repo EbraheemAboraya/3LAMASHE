@@ -53,9 +53,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* خلفية واحدة ثابتة (fixed) لكامل الموقع — كل الأقسام (الهيدر، استكشف المنيو،
+   المنتجات، الفوتر) تمرّ فوقها بتدرّج داكن شفاف خاص بها فقط، دون أي صورة
+   خلفية منفصلة لكل قسم، لتفادي أي خط فاصل أو تكرار عند حدود الأقسام. */
 body {
   font-family: var(--font-body);
-  background-color: var(--cream);
+  background: var(--black) url('/images/coffee/background.png') center / cover no-repeat fixed;
   color: var(--text-dark);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;

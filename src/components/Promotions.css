@@ -1,9 +1,0 @@
-/* ── قسم الأكثر طلباً ── */
-.promos-section {
-  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
-  padding: 60px 0 80px;
-}
-
-.promos-grid {
-  margin-bottom: 0;
-}

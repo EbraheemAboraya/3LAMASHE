@@ -10,8 +10,6 @@ function handleImageError(event, product) {
 function ProductCard({ product }) {
   return (
     <article className="product-card">
-      {product.featured && <span className="card-badge">الأكثر طلباً</span>}
-
       {/* ── صورة المنتج ── */}
       <div className="card-img-wrap">
         <img

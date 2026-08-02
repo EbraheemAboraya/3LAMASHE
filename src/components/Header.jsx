@@ -1,23 +1,43 @@
 import './Header.css'
-import { STORE_INFO } from '../data/products'
 
-function Header() {
+function Header({ activeCategoryId, onSelectCategory }) {
+  // يبدّل القسم النشط ثم يمرّر الصفحة إلى قسم عرض المنتجات
+  function handleSelect(categoryId) {
+    return (event) => {
+      event.preventDefault()
+      onSelectCategory(categoryId)
+      document.getElementById('products-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <header className="header">
       <div className="container header-inner">
 
-        {/* ── الشعار ── */}
-        <a href="#top" className="header-logo">
-          <span className="logo-icon">☕</span>
-          <span className="logo-text">{STORE_INFO.name}</span>
-        </a>
-
         {/* ── روابط التنقل ── */}
         <nav className="header-nav" aria-label="التنقل الرئيسي">
-          <a href="#milkshakes" className="nav-link">الميلك شيك</a>
-          <a href="#special"    className="nav-link">نكهات مميزة</a>
-          <a href="#bakery"     className="nav-link">المخبوزات</a>
-          <a href="#footer"     className="nav-link">تواصل معنا</a>
+          <a
+            href="#milkshakes"
+            className={`nav-link${activeCategoryId === 'milkshakes' ? ' nav-link--active' : ''}`}
+            onClick={handleSelect('milkshakes')}
+          >
+            الميلك شيك
+          </a>
+          <a
+            href="#coffee"
+            className={`nav-link${activeCategoryId === 'coffee' ? ' nav-link--active' : ''}`}
+            onClick={handleSelect('coffee')}
+          >
+            زاوية القهوة
+          </a>
+          <a
+            href="#bakery"
+            className={`nav-link${activeCategoryId === 'bakery' ? ' nav-link--active' : ''}`}
+            onClick={handleSelect('bakery')}
+          >
+            المخبوزات
+          </a>
+          <a href="#footer" className="nav-link">تواصل معنا</a>
         </nav>
 
       </div>

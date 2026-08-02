@@ -16,13 +16,9 @@
 //  انسخ أي كائن منتج والصقه داخل مصفوفة products الخاصة بالفئة المطلوبة،
 //  وتأكد أن كل منتج له id فريد داخل الملف بالكامل.
 //
-//  ملاحظة عن "featured": المنتجات التي featured: true تظهر تلقائياً
-//  في قسم "الأكثر طلباً" في أسفل الصفحة.
-//
-//  ملاحظة عن الصور: معظم صور الميلك شيك ونكهات مميزة هي صور حقيقية
-//  مجانية من Pexels (لا تتطلب نسب/attribution). العناصر التي لم يتوفر
-//  لها صورة حقيقية مطابقة تماماً للنكهة (فانيلا، فستق حلبي، جوز الهند
-//  رافايلو) تحمل تعليق TODO فوقها — استبدلها بصورة حقيقية عندما تتوفر.
+//  ملاحظة عن الصور: صور الميلك شيك كلها صور خاصة موجودة في
+//  /public/images/MILKSAHKE/. صور زاوية القهوة موجودة في
+//  /public/images/coffee/.
 // ================================================================
 
 // ── معلومات المتجر (تظهر في الهيدر والفوتر) ─────────────────────
@@ -51,8 +47,7 @@ export const categories = [
         name:        "أوريو",
         description: "ميلك شيك غني بطعم الأوريو الكلاسيكي مع قطع بسكويت مطحونة وكريمة فوق سائلة.",
         price:       "25 ₪",
-        featured:    true,
-        image: "https://images.pexels.com/photos/25913231/pexels-photo-25913231.jpeg?auto=compress&cs=tinysrgb&w=800",
+        image: "/images/MILKSAHKE/oreo.jpg",
         alt:   "ميلك شيك أوريو",
       },
       {
@@ -60,7 +55,7 @@ export const categories = [
         name:        "لوتس",
         description: "ميلك شيك بطعم بسكويت لوتس الكراميلي، مع صوص لوتس وقطع بسكويت مقرمشة.",
         price:       "25 ₪",
-        image: "https://images.pexels.com/photos/28841107/pexels-photo-28841107.jpeg?auto=compress&cs=tinysrgb&w=800",
+        image: "/images/MILKSAHKE/latos.jpg",
         alt:   "ميلك شيك لوتس",
       },
       {
@@ -68,8 +63,7 @@ export const categories = [
         name:        "فانيلا",
         description: "ميلك شيك كلاسيكي بنكهة الفانيلا الطبيعية الناعمة، بسيط وأصيل.",
         price:       "25 ₪",
-        // TODO: صورة مؤقتة (placeholder) — لم يتوفر لها بديل حقيقي مناسب، استبدلها بصورة حقيقية لاحقاً
-        image: "https://placehold.co/500x500/EFE1C6/2B211A?text=Vanilla+Milkshake",
+        image: "/images/MILKSAHKE/vanel.jpg",
         alt:   "ميلك شيك فانيلا",
       },
       {
@@ -77,7 +71,7 @@ export const categories = [
         name:        "نوتيلا",
         description: "ميلك شيك بطعم نوتيلا الشوكولاتة والبندق الغني، مع صوص نوتيلا فوقه.",
         price:       "25 ₪",
-        image: "https://images.pexels.com/photos/18133821/pexels-photo-18133821.jpeg?auto=compress&cs=tinysrgb&w=800",
+        image: "/images/MILKSAHKE/nutella.jpg",
         alt:   "ميلك شيك نوتيلا",
       },
       {
@@ -85,7 +79,7 @@ export const categories = [
         name:        "كندر",
         description: "ميلك شيك بطعم شوكولاتة كندر الكريمية مع قطع شوكولاتة كندر الحقيقية.",
         price:       "25 ₪",
-        image: "https://images.pexels.com/photos/11381485/pexels-photo-11381485.jpeg?auto=compress&cs=tinysrgb&w=800",
+        image: "/images/MILKSAHKE/kinder1.jpg",
         alt:   "ميلك شيك كندر",
       },
       {
@@ -93,8 +87,7 @@ export const categories = [
         name:        "فستق حلبي",
         description: "ميلك شيك بطعم الفستق الحلبي الأصيل، مع رشة فستق مجروش على الوجه.",
         price:       "25 ₪",
-        // TODO: صورة مؤقتة (placeholder) — لم يتوفر لها بديل حقيقي مناسب، استبدلها بصورة حقيقية لاحقاً
-        image: "https://placehold.co/500x500/7A8B5C/FBF3E1?text=Pistachio+Milkshake",
+        image: "/images/MILKSAHKE/pistachio.jpg",
         alt:   "ميلك شيك فستق حلبي",
       },
       {
@@ -102,7 +95,7 @@ export const categories = [
         name:        "توت",
         description: "ميلك شيك منعش بطعم التوت الطازج، مع لمسة حلاوة طبيعية مميزة.",
         price:       "25 ₪",
-        image: "https://images.pexels.com/photos/3625372/pexels-photo-3625372.jpeg?auto=compress&cs=tinysrgb&w=800",
+        image: "/images/MILKSAHKE/berry.jpg",
         alt:   "ميلك شيك توت",
       },
       {
@@ -110,7 +103,7 @@ export const categories = [
         name:        "توت موز",
         description: "مزيج منعش من التوت والموز الطازج في كوب ميلك شيك كريمي القوام.",
         price:       "25 ₪",
-        image: "https://images.pexels.com/photos/10066814/pexels-photo-10066814.jpeg?auto=compress&cs=tinysrgb&w=800",
+        image: "/images/MILKSAHKE/berry-banana.jpg",
         alt:   "ميلك شيك توت موز",
       },
       {
@@ -118,70 +111,204 @@ export const categories = [
         name:        "كراميل",
         description: "ميلك شيك غني بصوص الكراميل الذهبي الكريمي، حلاوة متوازنة في كل رشفة.",
         price:       "25 ₪",
-        image: "https://images.pexels.com/photos/214333/pexels-photo-214333.jpeg?auto=compress&cs=tinysrgb&w=800",
+        image: "/images/MILKSAHKE/caramel-milkshake.jpg",
         alt:   "ميلك شيك كراميل",
       },
     ],
   },
 
   // ─────────────────────────────────────────────────────────────
-  //  الفئة الثانية — نكهات مميزة
+  //  الفئة الثانية — زاوية القهوة
   // ─────────────────────────────────────────────────────────────
   {
-    id:       "special",
-    label:    "نكهات مميزة",
-    icon:     "✨",
-    subtitle: "تشكيلة مميزة بسعر موحّد 25 ₪",
-    products: [
+    id:       "coffee",
+    label:    "زاوية القهوة | פינת הקפה",
+    icon:     "☕",
+    subtitle: "مشروبات ساخنة وباردة بتحضير فاخر | משקאות חמים וקרים בהכנה איכותית",
+    // زاوية القهوة مقسّمة إلى مجموعتين فرعيتين (تبويب ساخن/بارد) بدل مصفوفة products مسطّحة.
+    // ProductsSection.jsx يتحقق من وجود groups ويعرض تبويبات التبديل تلقائياً.
+    groups: [
       {
-        id:          10,
-        name:        "بلو بيري",
-        description: "ميلك شيك مميز بطعم التوت الأزرق المنعش، مع لمسة كريمية فاخرة.",
-        price:       "25 ₪",
-        image: "https://images.pexels.com/photos/11135665/pexels-photo-11135665.jpeg?auto=compress&cs=tinysrgb&w=800",
-        alt:   "ميلك شيك بلو بيري",
+        id:    "hot",
+        label: "المشروبات الساخنة | משקאות חמים",
+        icon:  "☕",
+        products: [
+          {
+            id:          "espresso-short",
+            name:        "إسبريسو قصير | אספרסו קצר",
+            description: "",
+            price:       "6 ₪",
+            image: "/images/coffee/espresso-short.png",
+            alt:   "كوب إسبريسو قصير من عَ الماشي",
+          },
+          {
+            id:          "espresso-short-double",
+            name:        "إسبريسو قصير دبل | אספרסו כפול קצר",
+            description: "",
+            price:       "10 ₪",
+            image: "/images/coffee/espresso-short-double.png",
+            alt:   "كوب إسبريسو قصير دبل من عَ الماشي",
+          },
+          {
+            id:          "espresso-long",
+            name:        "إسبريسو طويل | אספרסו ארוך",
+            description: "",
+            price:       "6 ₪",
+            image: "/images/coffee/espresso-long.png",
+            alt:   "كوب إسبريسو طويل من عَ الماشي",
+          },
+          {
+            id:          "espresso-long-double",
+            name:        "إسبريسو طويل دبل | אספרסו כפול ארוך",
+            description: "",
+            price:       "10 ₪",
+            image: "/images/coffee/espresso-long-double.png",
+            alt:   "كوب إسبريسو طويل دبل من عَ الماشي",
+          },
+          {
+            id:          "hafuch-small",
+            name:        "هافوخ صغير | הפוך קטן",
+            description: "قهوة بالحليب مع رسمة قلب",
+            price:       "12 ₪",
+            image: "/images/coffee/hafuch-small.png",
+            alt:   "كوب هافوخ صغير مع رسمة قلب من عَ الماشي",
+          },
+          {
+            id:          "hafuch-large",
+            name:        "هافوخ كبير | הפוך גדול",
+            description: "قهوة بالحليب مع رسمة قلب",
+            price:       "14 ₪",
+            image: "/images/coffee/hafuch-large.png",
+            alt:   "كوب هافوخ كبير مع رسمة قلب من عَ الماشي",
+          },
+          {
+            id:          "cortado",
+            name:        "كورتادو | קורטדו",
+            description: "",
+            price:       "10 ₪",
+            image: "/images/coffee/cortado.png",
+            alt:   "كوب كورتادو من عَ الماشي",
+          },
+          {
+            id:          "americano-hot-small",
+            name:        "أمريكانو ساخن صغير | אמריקנו חם קטן",
+            description: "",
+            price:       "10 ₪",
+            image: "/images/coffee/americano-hot-small.png",
+            alt:   "كوب أمريكانو ساخن صغير من عَ الماشي",
+          },
+          {
+            id:          "americano-hot-large",
+            name:        "أمريكانو ساخن كبير | אמריקנו חם גדול",
+            description: "",
+            price:       "12 ₪",
+            image: "/images/coffee/americano-hot-large.png",
+            alt:   "كوب أمريكانو ساخن كبير من عَ الماشي",
+          },
+          {
+            id:          "mocha-hot-small",
+            name:        "موكا ساخنة صغيرة | מוקה חם קטן",
+            description: "قهوة موكا غنية بالشوكولاتة",
+            price:       "12 ₪",
+            image: "/images/coffee/mocha-hot-small.png",
+            alt:   "كوب موكا ساخنة صغيرة من عَ الماشي",
+          },
+          {
+            id:          "mocha-hot-large",
+            name:        "موكا ساخنة كبيرة | מוקה חם גדול",
+            description: "قهوة موكا غنية بالشوكولاتة",
+            price:       "14 ₪",
+            image: "/images/coffee/mocha-hot-large.png",
+            alt:   "كوب موكا ساخنة كبيرة من عَ الماشي",
+          },
+          {
+            id:          "macchiato",
+            name:        "ماكياتو | מקיאטו",
+            description: "",
+            price:       "8 ₪",
+            image: "/images/coffee/macchiato-small.png",
+            alt:   "كوب ماكياتو من عَ الماشي",
+          },
+          {
+            id:          "macchiato-double",
+            name:        "ماكياتو دبل | מקיאטו כפול",
+            description: "",
+            price:       "10 ₪",
+            image: "/images/coffee/macchiato-double.png",
+            alt:   "كوب ماكياتو دبل من عَ الماشي",
+          },
+          {
+            id:          "affogato",
+            name:        "أفوغاتو | אפוגטו",
+            description: "كرة بوظة فانيلا مع شوت إسبريسو | כדור גלידת וניל עם שוט אספרסו",
+            price:       "12 ₪",
+            image: "/images/coffee/affogato-1.png",
+            alt:   "أفوغاتو مع بوظة فانيلا وإسبريسو من عَ الماشي",
+          },
+        ],
       },
       {
-        id:          11,
-        name:        "جوز الهند رافايلو",
-        description: "نكهة فاخرة تجمع جوز الهند الناعم مع لمسة اللوز على طريقة رافايلو.",
-        price:       "25 ₪",
-        // TODO: صورة مؤقتة (placeholder) — لم يتوفر لها بديل حقيقي مناسب، استبدلها بصورة حقيقية لاحقاً
-        image: "https://placehold.co/500x500/EFE1C6/8B5E34?text=Coconut+Raffaello",
-        alt:   "ميلك شيك جوز الهند رافايلو",
-      },
-      {
-        id:          12,
-        name:        "مارشميلو كاندي",
-        description: "ميلك شيك حلو ومرح بطعم المارشميلو الطري، مع قطع كاندي ملونة فوقه.",
-        price:       "25 ₪",
-        image: "https://images.pexels.com/photos/1028735/pexels-photo-1028735.jpeg?auto=compress&cs=tinysrgb&w=800",
-        alt:   "ميلك شيك مارشميلو كاندي",
-      },
-      {
-        id:          13,
-        name:        "كورن فلكس",
-        description: "نكهة مبتكرة بطعم رقائق الذرة المقرمشة، مع لمسة كراميل خفيفة.",
-        price:       "25 ₪",
-        image: "https://images.pexels.com/photos/20460/pexels-photo.png?auto=compress&cs=tinysrgb&w=800",
-        alt:   "ميلك شيك كورن فلكس",
-      },
-      {
-        id:          14,
-        name:        "بريتزل مالح",
-        description: "مزيج فريد بين الحلو والمالح، مع قطع البريتزل المقرمشة الحقيقية.",
-        price:       "25 ₪",
-        image: "https://images.pexels.com/photos/6025810/pexels-photo-6025810.jpeg?auto=compress&cs=tinysrgb&w=800",
-        alt:   "ميلك شيك بريتزل مالح",
-      },
-      {
-        id:          15,
-        name:        "كراميل مالح",
-        description: "توازن مثالي بين حلاوة الكراميل ولمسة الملح المميزة في كل رشفة.",
-        price:       "25 ₪",
-        featured:    true,
-        image: "https://images.pexels.com/photos/128399/pexels-photo-128399.jpeg?auto=compress&cs=tinysrgb&w=800",
-        alt:   "ميلك شيك كراميل مالح",
+        id:    "cold",
+        label: "المشروبات الباردة | משקאות קרים",
+        icon:  "🧊",
+        products: [
+          {
+            id:          "iced-coffee-classic",
+            name:        "قهوة باردة كلاسيك | קפה קר קלאסי",
+            description: "350 مل",
+            price:       "15 ₪",
+            image: "/images/coffee/iced-coffee-classic.png",
+            alt:   "قهوة باردة كلاسيك من عَ الماشي",
+          },
+          {
+            id:          "iced-coffee-vanilla",
+            name:        "قهوة باردة فانيلا | קפה קר וניל",
+            description: "350 مل",
+            price:       "15 ₪",
+            image: "/images/coffee/iced-coffee-vanilla.png",
+            alt:   "قهوة باردة فانيلا من عَ الماشي",
+          },
+          {
+            id:          "iced-coffee-caramel",
+            name:        "قهوة باردة كراميل | קפה קר קרמל",
+            description: "350 مل",
+            price:       "15 ₪",
+            image: "/images/coffee/iced-coffee-caramel.png",
+            alt:   "قهوة باردة كراميل من عَ الماشي",
+          },
+          {
+            id:          "iced-coffee-cookies",
+            name:        "قهوة باردة كوكيز | קפה קר קוקיז",
+            description: "350 مل",
+            price:       "15 ₪",
+            image: "/images/coffee/iced-coffee-cookies.png",
+            alt:   "قهوة باردة كوكيز من عَ الماشي",
+          },
+          {
+            id:          "iced-coffee-hazelnut",
+            name:        "قهوة باردة بندق | קפה קר אגוזי לוז",
+            description: "350 مل",
+            price:       "15 ₪",
+            image: "/images/coffee/iced-coffee-hazelnut.png",
+            alt:   "قهوة باردة بندق من عَ الماشي",
+          },
+          {
+            id:          "iced-americano",
+            name:        "آيس أمريكانو | אייס אמריקנו",
+            description: "350 مل",
+            price:       "15 ₪",
+            image: "/images/coffee/iced-americano.png",
+            alt:   "آيس أمريكانو من عَ الماشي",
+          },
+          {
+            id:          "iced-mocha",
+            name:        "آيس موكا | אייס מוקה",
+            description: "350 مل",
+            price:       "15 ₪",
+            image: "/images/coffee/iced-mocha.png",
+            alt:   "آيس موكا من عَ الماشي",
+          },
+        ],
       },
     ],
   },
@@ -216,7 +343,6 @@ export const categories = [
         name:        "كرواسون لوتس",
         description: "كرواسون مقرمش من الخارج، محشو بكريمة لوتس اللذيذة من الداخل.",
         price:       "16 ₪",
-        featured:    true,
         image: "https://placehold.co/500x500/8B5E34/FBF3E1?text=Lotus+Croissant",
         alt:   "كرواسون لوتس",
       },
@@ -257,7 +383,6 @@ export const categories = [
         name:        "سينابون",
         description: "لفافة قرفة دافئة ومغطاة بكريمة الجبن الحلوة، حلاوة لا تُقاوم.",
         price:       "15 ₪",
-        featured:    true,
         image: "https://placehold.co/500x500/A9702B/FBF3E1?text=Cinnabon",
         alt:   "سينابون",
       },

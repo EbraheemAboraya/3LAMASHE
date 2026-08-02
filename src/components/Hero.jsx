@@ -9,21 +9,12 @@ function Hero() {
 
       <div className="container hero-content">
 
-        {/* شارة صغيرة */}
-        <div className="hero-badge">☕ قائمة رقمية أنيقة</div>
-
-        {/* اسم المتجر */}
-        <h1 className="hero-title">{STORE_INFO.name}</h1>
-
-        {/* الشعار التعريفي */}
-        <p className="hero-subtitle">{STORE_INFO.tagline}</p>
-
-        {/* زر الإجراء */}
-        <div className="hero-buttons">
-          <a href="#milkshakes" className="hero-btn hero-btn--primary">
-            تصفح المنيو
-          </a>
-        </div>
+        {/* شعار المتجر */}
+        <img
+          src="/images/coffee/logo.png"
+          alt={STORE_INFO.name}
+          className="hero-logo-img"
+        />
 
       </div>
     </section>

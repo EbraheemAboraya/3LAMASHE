@@ -12,33 +12,10 @@
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 16px;
   padding-top: 14px;
   padding-bottom: 14px;
-}
-
-/* ══════════════════════════════
-   LOGO — على الماشي
-   ══════════════════════════════ */
-.header-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-}
-
-.logo-icon {
-  font-size: 1.6rem;
-  line-height: 1;
-}
-
-.logo-text {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--gold-light);
-  letter-spacing: 0.5px;
 }
 
 /* ── Nav links ── */
@@ -62,11 +39,14 @@
   color: var(--gold-light);
 }
 
+/* ── الرابط النشط حالياً ── */
+.nav-link--active {
+  background: rgba(201, 162, 39, 0.28);
+  color: var(--gold-light);
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .header-nav { display: none; }
 }
 
-@media (max-width: 480px) {
-  .logo-text        { font-size: 1.2rem; }
-}

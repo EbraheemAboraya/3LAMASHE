@@ -1,10 +1,19 @@
 /* ── Products Section ── */
+/* تدرّج داكن شفاف فقط فوق خلفية <body> الثابتة المشتركة — نفس المنطق في كل قسم،
+   بلا صورة منفصلة، فتبقى الخلفية متصلة بلا أي خط فاصل بين الأقسام.
+   البطاقات البيضاء المصمتة تبقى بوضوح تام فوقها دون أي تعديل عليها. */
 .products-section {
+  position: relative;
+  background: linear-gradient(180deg, rgba(10, 14, 10, 0.55) 0%, rgba(10, 14, 10, 0.68) 100%);
   padding: 60px 0 70px;
 }
 
-.products-section:nth-of-type(even) {
-  background: var(--cream-dark);
+.products-section .section-title {
+  color: var(--cream);
+}
+
+.products-section .section-subtitle {
+  color: var(--beige);
 }
 
 /* ── Category heading ── */
@@ -20,18 +29,114 @@
   font-size: 2rem;
 }
 
-/* ── Responsive product grid ── */
+/* ── Responsive product grid — بطاقات أصغر لعرض أكثر بتمرير أقل ── */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 26px;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 18px;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   تبويبات فرعية (ساخن/بارد) — مستخدمة داخل زاوية القهوة فقط
+   ══════════════════════════════════════════════════════════════ */
+/* text-align (not flex) يوسّط شريط التبويبات فقط دون تحويل .group-panel
+   إلى صندوق بحجم محتواه — وإلا تنكمش شبكة المنتجات عن عرض الحاوية الكامل */
+.group-tabs-wrap {
+  text-align: center;
+}
+
+/* ── حاوية التبديل (Segmented toggle) ── */
+.group-tabs {
+  display: inline-flex;
+  gap: 6px;
+  background: var(--white);
+  border: 1px solid rgba(201, 162, 39, 0.18);
+  border-radius: var(--radius-full);
+  padding: 6px;
+  margin-bottom: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.group-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 26px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--text-medium);
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+}
+
+.group-tab:hover {
+  color: var(--text-dark);
+}
+
+.group-tab__icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+/* ── التبويب الساخن النشط — هوية الموقع الذهبية ── */
+.group-tab--hot.group-tab--active {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--black);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── التبويب البارد النشط — لمسة ثلجية منعشة مع الحفاظ على الهوية ── */
+.group-tab--cold.group-tab--active {
+  background: linear-gradient(135deg, #8FD3E8 0%, #D9F4FA 100%);
+  color: #0B3A4A;
+  box-shadow: 0 6px 18px rgba(88, 179, 208, 0.35);
+}
+
+/* ── حركة انتقال ناعمة عند التبديل بين ساخن وبارد ── */
+.group-panel {
+  animation: group-panel-in 0.45s ease;
+}
+
+@keyframes group-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .group-tabs {
+    width: 100%;
+    justify-content: center;
+  }
+  .group-tab {
+    flex: 1;
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .group-panel {
+    animation: none;
+  }
 }
 
 /* ── Responsive ── */
 @media (max-width: 600px) {
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    gap: 12px;
   }
 }
 

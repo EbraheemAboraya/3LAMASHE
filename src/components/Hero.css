@@ -1,8 +1,9 @@
 /* ── Hero ── */
+/* بلا أي تدرّج داكن خاص به — خلفية <body> الثابتة المشتركة تظهر هنا كما هي،
+   فقط توهج hero-glow الذهبي فوقها. */
 .hero {
   position: relative;
   overflow: hidden;
-  background: radial-gradient(ellipse at top, #2A2119 0%, #1B1611 60%);
   padding: 120px 0 100px;
   text-align: center;
 }
@@ -25,72 +26,20 @@
   margin: 0 auto;
 }
 
-.hero-badge {
-  display: inline-block;
-  background: rgba(201, 162, 39, 0.14);
-  border: 1px solid rgba(201, 162, 39, 0.4);
-  color: var(--gold-light);
-  font-weight: 600;
-  font-size: 0.9rem;
-  padding: 8px 20px;
-  border-radius: var(--radius-full);
-  margin-bottom: 28px;
-}
-
-.hero-title {
-  font-family: var(--font-heading);
-  font-size: 4rem;
-  font-weight: 700;
-  color: var(--cream);
-  margin-bottom: 18px;
-  text-shadow: 0 2px 24px rgba(201, 162, 39, 0.25);
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  color: var(--beige);
-  max-width: 520px;
-  margin: 0 auto 40px;
-  line-height: 1.9;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.hero-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 15px 34px;
-  border-radius: var(--radius-full);
-  font-weight: 700;
-  font-size: 1.02rem;
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.hero-btn--primary {
-  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-  color: var(--black);
-  box-shadow: 0 8px 26px rgba(201, 162, 39, 0.35);
-}
-
-.hero-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(201, 162, 39, 0.4);
+.hero-logo-img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0 2px 24px rgba(201, 162, 39, 0.25));
 }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  .hero        { padding: 90px 0 70px; }
-  .hero-title  { font-size: 2.6rem; }
-  .hero-subtitle { font-size: 1.05rem; }
+  .hero          { padding: 90px 0 70px; }
+  .hero-logo-img { max-width: 300px; }
 }
 
 @media (max-width: 480px) {
-  .hero-title  { font-size: 2.1rem; }
-  .hero-btn    { padding: 13px 26px; font-size: 0.95rem; }
+  .hero-logo-img { max-width: 230px; }
 }

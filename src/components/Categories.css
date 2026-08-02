@@ -1,7 +1,18 @@
 /* ── Categories Section ── */
+/* تدرّج داكن شفاف فقط فوق خلفية <body> الثابتة المشتركة — بلا صورة منفصلة هنا،
+   حتى لا يظهر أي خط فاصل بينها وبين الأقسام المجاورة. */
 .categories-section {
-  background: var(--cream-dark);
-  padding: 56px 0 48px;
+  position: relative;
+  background: linear-gradient(180deg, rgba(10, 14, 10, 0.45) 0%, rgba(10, 14, 10, 0.6) 100%);
+  padding: 64px 0 56px;
+}
+
+.categories-section .section-title {
+  color: var(--cream);
+}
+
+.categories-section .section-subtitle {
+  color: var(--beige);
 }
 
 .categories-row {
@@ -30,6 +41,17 @@
   transform: translateY(-5px);
   border-color: var(--gold);
   box-shadow: var(--shadow-md);
+}
+
+/* ── التبويب النشط حالياً ── */
+.cat-btn--active {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-md);
+}
+
+.cat-btn--active .cat-btn__label {
+  color: var(--black);
 }
 
 .cat-btn__icon {

@@ -1,6 +1,9 @@
 /* ── Footer ── */
+/* تدرّج داكن أقوى (نص الفوتر منخفض التباين أصلاً) فوق خلفية <body> الثابتة،
+   بلا صورة منفصلة هنا لنفس سبب استمرارية الخلفية دون خط فاصل. */
 .footer {
-  background: var(--black);
+  position: relative;
+  background: linear-gradient(180deg, rgba(8, 11, 8, 0.88) 0%, rgba(8, 11, 8, 0.94) 100%);
   color: rgba(251, 246, 236, 0.82);
   padding: 64px 0 0;
 }
@@ -71,6 +74,12 @@
 .footer-links a:hover,
 .footer-list a:hover {
   color: var(--gold-light);
+}
+
+/* ── الرابط النشط حالياً ── */
+.footer-link--active {
+  color: var(--gold-light);
+  font-weight: 600;
 }
 
 /* ── Bottom bar ── */
